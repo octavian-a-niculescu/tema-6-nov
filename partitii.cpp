@@ -70,3 +70,22 @@ int main()
 	cin >> n;
 	back(1);
 }
+
+//am incercat 
+int valid(int k)
+{
+	if (k == 1)
+	{
+		termeni = 0;
+		s = 0;
+	}
+	if (s + st[k] > n)
+	{
+		termeni--;
+		s -= st[k];
+		return 0;
+	}
+	termeni++;
+	s += st[k];
+	return 1;
+}
